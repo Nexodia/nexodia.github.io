@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Ticketing';
+    src: url(font/Ticketing.woff2) format('woff2');
+}
+
+body {
+    background-color: #121212;
+    color: aliceblue;
+    font-family: Ticketing;
+    text-align: center;
+
+}
+
+.box{
+    background-color: #191f25;
+    width:fit-content ;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    padding: 10px;
+}
+

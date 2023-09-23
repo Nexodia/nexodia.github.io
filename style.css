@@ -11,12 +11,116 @@ body {
 
 }
 
-.box{
+.titlebox {
     background-color: #191f25;
-    width:fit-content ;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
     border: 2px solid white;
     padding: 10px;
 }
 
+.contenido {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    padding: 20px;
+    background-color: #191f25;
+    border: 2px solid white;
+    width: 600px;
+    height: 300px;
+    margin: 16px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box:hover {
+    background-color: #2e3439;
+}
+
+.circle {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    transition: transform 1s;
+}
+
+.circle:hover {
+    transform: rotate(180deg);
+    transition: transform 1s;
+}
+
+.img1,
+.img2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transition: opacity 0.3s; 
+    top: 50%; /* Posiciona las imágenes en el centro verticalmente */
+    left: 50%; /* Posiciona las imágenes en el centro horizontalmente */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+         
+
+.box:hover .img1 {
+    opacity: 1;
+}
+
+.box:hover .img2 {
+    opacity: 0; /* Oculta la segunda imagen al pasar el mouse sobre la caja */
+}
+
+.futer {
+    position: absolute; /* Permite superponer el footer */
+    bottom: 0; /* Coloca el footer en la parte inferior del .box */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el footer */
+    color: white; /* Color del texto del footer */
+    padding: 10px; /* Espaciado para el contenido del footer */
+}
+/** CSS DARK THEME PRIMARY COLORS 
+ 
+ --color-primary-100:  #03a9f4;
+ --color-primary-200:  #4ab2f5;
+ --color-primary-300:  #6abcf7;
+ --color-primary-400:  #84c5f8;
+ --color-primary-500:  #9bcefa;
+ --color-primary-600:  #b1d8fb;
+ 
+ 
+/** CSS DARK THEME SURFACE COLORS 
+ 
+ --color-surface-100:  #121212;
+ --color-surface-200:  #282828;
+ --color-surface-300:  #3f3f3f;
+ --color-surface-400:  #575757;
+ --color-surface-500:  #717171;
+ --color-surface-600:  #8b8b8b;
+ 
+ 
+/** CSS DARK THEME MIXED SURFACE COLORS 
+ 
+ --color-surface-mixed-100:  #191f25;
+ --color-surface-mixed-200:  #2e3439;
+ --color-surface-mixed-300:  #454a4f;
+ --color-surface-mixed-400:  #5d6166;
+ --color-surface-mixed-500:  #76797e;
+ --color-surface-mixed-600:  #8f9396;
+ 
+ 
+/** EXAMPLES 
+ 
+ color:  var(--color-primary-600);
+ 
+ background-color:  var(--color-surface-300);
+
+          
+*/
+
+      

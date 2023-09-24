@@ -163,3 +163,8 @@ setInterval(() => {
     ctx.fillRect(rectder.x- rectder.w/2, rectder.y - rectder.h/2, rectder.w, rectder.h)
 
 }, 1000/144)
+
+function playSound() {
+    var audio = document.getElementById("nihaha");
+    audio.play();
+}

@@ -59,6 +59,7 @@ body {
 .circle:hover {
     transform: rotate(180deg);
     transition: transform 1s;
+    cursor: pointer;
 }
   
 .img {
@@ -103,7 +104,15 @@ body {
 }
 
 
+.endpage {
+    background-image: url("img/endpage.webp");
+    background-size: 600px;
+    height: 400px;
+    width: 600px;
 
+    margin-top: 20px;
+    
+}
 
 
 

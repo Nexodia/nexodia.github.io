@@ -25,10 +25,10 @@ class Rectangulo {
         this.h = h;
         this.color = color;
     }
+
     gethh() {
         return this.h/2;
     }
-    
 }
 
 let circular = new Bolita("white");
@@ -39,9 +39,18 @@ let ymov = 5
 let vel = 5
 let lado = 1
 let busy = false
+let puntos = 0
+let best = 0
+let busyP = false
 
-function r() {
-
+function pointHandler() {
+    if (!busyP) {
+        busyP = true
+        puntos++
+        setTimeout(() => {
+            busyP = false
+        }, 100)
+    }
 }
 
 document.addEventListener( "keydown", (event) => {
@@ -68,9 +77,7 @@ setInterval(() => {
     if (keys['k'] && rectder.y <= canvas.height - rectder.gethh()) {
         rectder.y += 4;
     }
-    
     if (keys['r']) {
-
         if (!busy) {    
             circular.x = 450
             circular.y = 300
@@ -80,16 +87,12 @@ setInterval(() => {
             rectizq.y = 300
             lado *= -1
             busy = true
+            puntos = 0
             setTimeout(()=> {
                 busy = false
             }, 750)
         }
-
-        
     }
-    
-
-
     
     circular.x += xmov;
     circular.y += ymov;
@@ -99,39 +102,56 @@ setInterval(() => {
         xmov = 0
         ymov = 0
     } 
-        
+    
     if (circular.x <= 0 + circular.radio) {
         //Blu wins
         xmov = 0
         ymov = 0
     }
-
+    
     if (circular.y >= 600 -circular.radio) {
         ymov = -vel
     }
+
     if (circular.y <= 0 + circular.radio) {
         ymov = vel
     }
-
-
+    
+    
     if (circular.x >= rectizq.x - rectizq.w/2 - circular.radio && circular.x <= rectizq.x + rectizq.w/2 + circular.radio && circular.y >= rectizq.y - rectizq.h/2 - circular.radio && circular.y <= rectizq.y - rectizq.h/2 - circular.radio + 5){
         ymov = -vel
+        pointHandler()
     } else if (circular.x >= rectizq.x - rectizq.w/2 - circular.radio && circular.x <= rectizq.x + rectizq.w/2 + circular.radio && circular.y >= rectizq.y + rectizq.h/2 + circular.radio -5 && circular.y <= rectizq.y + rectizq.h/2 + circular.radio){
         ymov = vel
+        pointHandler()
     } else if (circular.x >= rectizq.x - rectizq.w/2 - circular.radio && circular.x <= rectizq.x + rectizq.w/2 + circular.radio && circular.y >= rectizq.y - rectizq.h/2 - circular.radio && circular.y <= rectizq.y + rectizq.h/2 + circular.radio) {
         xmov = vel
+        pointHandler()
     }
-
+    
     if (circular.x >= rectder.x - rectder.w/2 - circular.radio && circular.x <= rectder.x + rectder.w/2 + circular.radio && circular.y >= rectder.y - rectder.h/2 - circular.radio && circular.y <= rectder.y - rectder.h/2 - circular.radio + 5){
         ymov = -vel
+        pointHandler()
     } else if (circular.x >= rectder.x - rectder.w/2 - circular.radio && circular.x <= rectder.x + rectder.w/2 + circular.radio && circular.y >= rectder.y + rectder.h/2 + circular.radio -5 && circular.y <= rectder.y + rectder.h/2 + circular.radio){
         ymov = vel
+        pointHandler()
     } else if (circular.x >= rectder.x - rectder.w/2 - circular.radio && circular.x <= rectder.x + rectder.w/2 + circular.radio && circular.y >= rectder.y - rectder.h/2 - circular.radio && circular.y <= rectder.y + rectder.h/2 + circular.radio) {
         xmov = -vel
+        pointHandler()
     }
-
     
+    best = Math.max(puntos, best)
 
+    ctx.font = "150px Arial";
+    ctx.fillStyle = "#ffffff77";
+    ctx.textAlign = "center";
+    ctx.fillText(puntos, canvas.width/2, canvas.height/2 + 50);
+
+    ctx.font = "50px Arial";
+    ctx.fillStyle = "#ffffff33";
+    ctx.textAlign = "center";
+    ctx.fillText(best, canvas.width/2, canvas.height/2 + 150);
+    
     ctx.beginPath();
     ctx.arc(circular.x, circular.y, circular.radio, 0, 2 * Math.PI);
     ctx.fillStyle = circular.color;
@@ -142,4 +162,4 @@ setInterval(() => {
     ctx.fillStyle = rectder.color
     ctx.fillRect(rectder.x- rectder.w/2, rectder.y - rectder.h/2, rectder.w, rectder.h)
 
-},1000/144)
+}, 1000/144)

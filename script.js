@@ -142,12 +142,12 @@ setInterval(() => {
     
     best = Math.max(puntos, best)
 
-    ctx.font = "150px Arial";
+    ctx.font = "150px Ticketing";
     ctx.fillStyle = "#ffffff77";
     ctx.textAlign = "center";
     ctx.fillText(puntos, canvas.width/2, canvas.height/2 + 50);
 
-    ctx.font = "50px Arial";
+    ctx.font = "50px Ticketing";
     ctx.fillStyle = "#ffffff33";
     ctx.textAlign = "center";
     ctx.fillText(best, canvas.width/2, canvas.height/2 + 150);
@@ -163,3 +163,5 @@ setInterval(() => {
     ctx.fillRect(rectder.x- rectder.w/2, rectder.y - rectder.h/2, rectder.w, rectder.h)
 
 }, 1000/144)
+
+document.fonts.ready.then(() => draw());

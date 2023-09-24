@@ -104,7 +104,15 @@ body {
 }
 
 
+.endpage {
+    background-image: url("img/endpage.webp");
+    background-size: 600px;
+    height: 400px;
+    width: 600px;
 
+    margin-top: 20px;
+    
+}
 
 
 

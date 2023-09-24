@@ -81,8 +81,8 @@ setInterval(() => {
         if (!busy) {    
             circular.x = 450
             circular.y = 300
-            xmov = 5 * lado
-            ymov = 5
+            xmov = 5 * ladorand()
+            ymov = 5 * ladorand()
             rectder.y = 300
             rectizq.y = 300
             lado *= -1
@@ -164,7 +164,17 @@ setInterval(() => {
 
 }, 1000/144)
 
-function playSound() {
-    var audio = document.getElementById("nihaha");
+function playSound(sonido) {
+    var audio = new Audio(sonido)
     audio.play();
+}
+
+function randint(a, b) {
+    return Math.round(Math.random() * (b - a) + a);
+}
+
+function ladorand() {
+    let guess = randint(1,2)
+    if (guess == 2){return 1}
+    else {return -1}
 }

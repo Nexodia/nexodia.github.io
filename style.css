@@ -27,15 +27,16 @@ body {
 }
 
 .box {
-    padding: 15px;
+    
     background-color: #191f25;
     border: 2px solid white;
-    width: 600px;
-    min-height: 320px;
+    min-width: 700px;
+    min-height: 420px;
     margin: 16px;
     position: relative;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
 
 }
 
@@ -78,10 +79,36 @@ body {
     
 }
 
+.xion {
+    height: 250px;
+    width: 350px;
+}
+
+.xion:hover {
+    animation: xionanime 2s ease-in-out;
+}
+
+@keyframes xionanime {
+    25% {
+        translate: -100px;
+        rotate: -30deg;
+    }
+    50% {
+        scale: 1.2;
+    }
+    75% {
+        translate: 100px;
+        rotate: 30deg;
+    }
+    100% {
+        opacity: 50%;
+    }
+}
+
 .futer {
     position: flex; /* Permite superponer el footer */
     bottom: 0; /* Coloca el footer en la parte inferior del .box */
-    
+    width: 500px;
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el footer */
     color: white; /* Color del texto del footer */
     padding: 10px; /* Espaciado para el contenido del footer */

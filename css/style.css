@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Ticketing';
+    src: url(../font/Ticketing.woff2) format('woff2');
+}
+
+body {
+    background-color: #121212;
+    color: aliceblue;
+    font-family: Ticketing;
+    text-align: center;
+
+}
+
+.titlebox {
+    background-color: #191f25;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    padding: 20px;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191f25;
+    flex-direction: column;
+    
+}
+
+.box {
+    
+    background-color: #191f25;
+    border: 2px solid white;
+    min-width: 700px;
+    min-height: 420px;
+    margin: 16px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+}
+
+.box:hover {
+    background-color: #2e3439;
+}
+
+.boxcontainer {
+    display:grid;
+    place-items: center;
+}
+
+
+.card {
+    background-color: #191f25;
+    border: 2px solid white;
+    display: flex;
+    height: 420px;
+    width: 300px;
+    margin: 16px;
+    justify-content: center;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+    background-color: #2e3439;
+    filter: drop-shadow(10px 10px 0px #8f9396);
+    transform: translate(-10px,-10px);
+    
+}
+
+.card__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+
+.blog {
+    background-color: #121212;
+    border: 2px solid white;
+    display: flex;
+    height: 420px;
+    width: 800px;
+    margin: 16px;
+    margin-bottom: 50px;
+    text-align: left;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    padding: 20px;
+    flex: 1;
+    overflow: hidden;
+
+}
+
+.kazusa {
+    background-image: url("../img/kazusa.webp");
+    width: 100px; 
+    height: 100px;
+    background-size: cover;
+    border-radius: 100%;
+    margin-left: 20px;
+    
+}
+
+.blog__item {
+    width: 655px;
+    text-align: justify;
+}
+
+.endpage {
+    background-image: url("../img/endpage.webp");
+    background-size: 20rem;
+    height: 216px;
+    width: 307px;
+
+    margin-top: 20px;
+    
+}
+
+
+
+
+
+/** CSS DARK THEME PRIMARY COLORS 
+ 
+ --color-primary-100:  #03a9f4;
+ --color-primary-200:  #4ab2f5;
+ --color-primary-300:  #6abcf7;
+ --color-primary-400:  #84c5f8;
+ --color-primary-500:  #9bcefa;
+ --color-primary-600:  #b1d8fb;
+ 
+ 
+/** CSS DARK THEME SURFACE COLORS 
+ 
+ --color-surface-100:  #121212;
+ --color-surface-200:  #282828;
+ --color-surface-300:  #3f3f3f;
+ --color-surface-400:  #575757;
+ --color-surface-500:  #717171;
+ --color-surface-600:  #8b8b8b;
+ 
+ 
+/** CSS DARK THEME MIXED SURFACE COLORS 
+ 
+ --color-surface-mixed-100:  #191f25;
+ --color-surface-mixed-200:  #2e3439;
+ --color-surface-mixed-300:  #454a4f;
+ --color-surface-mixed-400:  #5d6166;
+ --color-surface-mixed-500:  #76797e;
+ --color-surface-mixed-600:  #8f9396;
+ 
+ 
+/** EXAMPLES 
+ 
+ color:  var(--color-primary-600);
+ 
+ background-color:  var(--color-surface-300);
+
+          
+*/
+
+      

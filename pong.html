@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pong.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    
+</head>
+<body>
+    <div class="boxcontainer">
+        <div>
+            <h2>Instrucciones</h2>
+            <h4>Selecciona tus Hz antes de partir (Default 60hz) <br>
+            Una vez listo haz click en el cuadro de abajo para cargar el juego <br>
+            Si tu monitor es de 60hz al colocar 144hz la velocidad del juego ira considerablemente mas rapido <br>
+            Si quieres cambiar los hz una vez partido el juego deberas recargar la pagina <br>
+            Dado reclamos de parte de algunas personas... la primera bola ira mas lento hasta topar una paleta</h4>
+            <button class="sesenta" id="sesenta">60hz</button>
+            <button class="cien" id="cien">144hz</button>
+        </div>
+        <div class="pongbox" id="pongbox">
+            <h1 id="pongtitle" class="pongtitle">Click aqui para iniciar</h1>
+            <canvas id="lienzo" class="ponghover lienzo" width="900" height="600"></canvas>
+        </div>
+        <div class="titlebox">
+            <h3>Controles</h3>
+            <p>Player 1 W: up S: down<br>Player 2 I: up K: down <br>R: reset ball</p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -8,40 +8,63 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
+
+    <header>  
+        <div style="width: fit-content;"> <h1>Nesito page</h1> </div>
+        <div class="boton" onclick="location.href='index.html';"> Volver a inicio </div>
+
+    </header>
+    
+
     <h1>Inicio</h1>
     <div class="card__container">
-        <div class="card">
+        <div class="card" onclick="location.href='pong.html';">
             <h1>Pong</h1>
             
         </div>
-        <div class="card">
+        <div class="card" onclick="location.href='animation.html';">
             <h1>Caja de<br>Animaciones</h1>
             
         </div>
         <div class="card">
-            <h1>Tetris</h1>
+            <h1>Tetris (wip)</h1>
             
         </div>
         <div class="card">
-            <h1>work in progress....</h1>
+            <h1>(wip)</h1>
 
         </div>
     </div>
     <div class="contenido">
         <h1>Blog</h1>
+
+        <div class="blog">
+            <ul class="blog__item">
+                <li>19-01-2024</li>
+                Despues de un tiempo sin hacer nada, volvi para hacer correctamente los links funcionales, devolvi las paginas antiguas en su respectiva tarjeta y repare
+                la funcionalidad del pong y las "animaciones", eso si tengo que rehacerla completamente ya que no sabia usar flexbox en ese momento
+            </ul> 
+            <ul>
+                <div class="kazusa"></div>
+            </ul>
+        </div>
+
         <div class="blog">
             <ul class="blog__item">
                 <li>19-01-2024</li>
                 Primera entrada del blog, decidi rehacer la pagina principal, estoy en proceso  de modularizar los items de esta pagina, ya que estaban todos en un solo archivo html viendose todo desordenado.
             </ul> 
-            <div class="kazusa"></div>
-            
+            <ul>
+                <div class="kazusa"></div>
+            </ul>
         </div>
+
+        
 
     </div>
 
 
-    <object data="footer.html" type="text/html" style="width: 400px; height: 380px;"></object>
+    <object data="footer.html" type="text/html" style="width: 400px; height: 400px;"></object>
 </body>
 <script src="script.js"></script>
 </html>

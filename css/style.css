@@ -8,7 +8,39 @@ body {
     color: aliceblue;
     font-family: Ticketing;
     text-align: center;
+    margin: 0;
 
+}
+
+header {
+    display: flex;
+    background-color: #273e52;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.boton {
+    background-color: #191f25;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.15s ease-in-out;
+
+}
+
+.boton:hover {
+    background-color: #2e3439;
 }
 
 .titlebox {
@@ -62,7 +94,8 @@ body {
     margin: 16px;
     justify-content: center;
     border-radius: 8px;
-    transition: 0.2s ease-in-out;
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -102,7 +135,7 @@ body {
     height: 100px;
     background-size: cover;
     border-radius: 100%;
-    margin-left: 20px;
+    margin-right: 20px;
     
 }
 

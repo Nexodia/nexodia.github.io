@@ -54,7 +54,6 @@ header {
     padding: 20px;
 }
 
-
 .box {
     
     background-color: #191f25;
@@ -77,7 +76,6 @@ header {
     display:grid;
     place-items: center;
 }
-
 
 .card {
     background-color: #191f25;
@@ -131,7 +129,7 @@ header {
 
     &__content {
         width: 655px;
-        text-align: justify;
+        // text-align: justify;
     }
 
     &__pfp {
@@ -173,7 +171,10 @@ header {
     
 }
 
-
+a {
+    text-decoration: none;
+    color: white; // o inherit : v
+  }
 
 
 

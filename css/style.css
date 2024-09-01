@@ -122,7 +122,6 @@ header {
 }
 .blog__content {
   width: 655px;
-  text-align: justify;
 }
 .blog__pfp {
   width: 130px;
@@ -157,6 +156,11 @@ header {
   width: 307px;
   overflow: hidden;
   margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 /** CSS DARK THEME PRIMARY COLORS 

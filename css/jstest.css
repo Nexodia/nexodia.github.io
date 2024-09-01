@@ -1,0 +1,10 @@
+.box {
+  display: grid;
+  place-items: center;
+}
+
+.calcbox {
+  height: 34rem;
+  width: 20rem;
+  background-color: aqua;
+}/*# sourceMappingURL=jstest.css.map */

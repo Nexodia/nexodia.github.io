@@ -1,0 +1,64 @@
+.circle {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    transition: transform 1s ease-in-out;
+
+}
+
+.circle:hover {
+    transform: rotate(180deg);
+    transition: transform 1s;
+    cursor: pointer;
+}
+  
+.img {
+    background-image: url("../img/FzXaWl_XwAE9bdX.webp");
+    width: 200px;
+    height: 200px;
+    background-size: 200px;
+    transition: 0.6s ease-in-out
+    
+}
+
+.img:hover {
+    background-image: url("../img/lupa.webp");
+    filter: drop-shadow(10px 10px 0px #8f9396);
+    transform: translate(-10px,-10px);
+    
+}
+
+.xion {
+    height: 250px;
+    width: 350px;
+}
+
+.xion:hover {
+    animation: xionanime 2s ease-in-out;
+}
+
+@keyframes xionanime {
+    25% {
+        translate: -100px;
+        rotate: -30deg;
+    }
+    50% {
+        scale: 1.2;
+    }
+    75% {
+        translate: 100px;
+        rotate: 30deg;
+    }
+    100% {
+        opacity: 50%;
+    }
+}
+
+.futer {
+    position: flex; /* Permite superponer el footer */
+    bottom: 0; /* Coloca el footer en la parte inferior del .box */
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el footer */
+    color: white; /* Color del texto del footer */
+    padding: 10px; /* Espaciado para el contenido del footer */
+}
